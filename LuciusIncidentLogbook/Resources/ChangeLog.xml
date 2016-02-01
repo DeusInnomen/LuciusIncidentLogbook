@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Updates>
+  <Update Version="0.2.13">
+    <![CDATA[* Added monospace as an output format.
+* Refactoring of output code
+]]>    
+  </Update>
+  <Update Version="0.2.12">
+    <![CDATA[* Fixed a crash when double clicking the Event List on an empty row.
+* You can now change a player's faction or replace the player with a different one (swapping current results to the new player) by right clicking on a player in the tournament results view.
+* Clicking on "Hide Past Events" in the event list will correctly refresh the list to hide past results now.
+* Other minor UI fixes too numerous to list.
+]]>    
+  </Update>
+  <Update Version="0.2.11">
+	  <![CDATA[* Fixed a crash when setting scores to an unexpected value.
+	  	   * Fixed users being able to enter scores > 12.
+		   * Set the export button to false when closing tournament config.
+		   * Fixed artifact of old bye system so adding a new participant didn't cause the old bye to lose their score.
+       * Made it so tournaments can be backdated.
+
+]]>
+  </Update>	
+  <Update Version="0.2.10">
+    <![CDATA[* Fixed a crash when adding new players to a tournament.
+]]>
+  </Update>
+  <Update Version="0.2.9">
+    <![CDATA[* You can now edit the results of previous rounds for tournaments.
+* Bye rounds are now calculated using Gaining Grounds 2014 rules: 10VP/3TP/5DIFF.
+* Player factions are now selected when adding them to the tournament. The faction chosen in the player profile is their default faction.
+]]>
+  </Update>
+  <Update Version="0.2.8">
+    <![CDATA[* Fixed bugs with the achievement league, where entered results are sometimes lost.
+]]>
+  </Update>
+  <Update Version="0.2.7">
+    <![CDATA[* Fixed a bug with importing where Player records were not considered new correctly.
+* The subject for Pre-Event reports now correctly says "Pre-Event" instead of "Post-Event".
+]]>
+  </Update>
+  <Update Version="0.2.6">
+    <![CDATA[* Added the option to export faction names and the tournament name (not supported by CSV files).
+* Added the option to exclude forfeitted players from the export.
+* The default filename for exports is now the name of the tournament.
+]]>
+  </Update>
+  <Update Version="0.2.5">
+    <![CDATA[* Results export formats expanded to include BB Code (for forums) and HTML.
+* Added exporting of tournament results.
+* Added button to View Tournament screen to export results.
+]]>
+  </Update>
+  <Update Version="0.2.4">
+    <![CDATA[* NEW FEATURE: You can now export tournament results as a CSV file from the Events list by right clicking on an event. (League exports will be coming in a future version.)
+]]>
+  </Update>
+  <Update Version="0.2.3">
+    <![CDATA[* NEW FEATURE: Table numbering can be normal (1, 2, 3, 4...), odd (1, 3, 5, 7...) or even (2, 4, 6, 8...) to better support team tournaments. This is a tournament-level setting.
+* NEW FEATURE: Player numbers are now shown in the Tournament view.
+* Fixed a bug where new achievement names would not be saved correctly.
+* Fixed an occasional crash that would occur after entering League results.
+* Fixed a bug with the randomly assigned tables producing highly erroneous results.
+* Font size adjusted slightly for timer.
+* You can now add players to an active tournament.
+]]>
+  </Update>
+  <Update Version="0.2.2">
+    <![CDATA[* Timers are now resizable, and the font size of the time will increase with the form's size.
+]]>
+  </Update>
+  <Update Version="0.2.1">
+    <![CDATA[* Added a Style.css file to the web server in order to make the mobile pages look correct on phones or tablets.
+* Fixed an error when right clicking in the player list (but not on a player) on the View Tournament screen could allow you to forfeit a blank player, causing a crash.
+* The web server should give a more helpful message when the port is in use or if you don't have permission to open the port. (Administration rights may be required.)
+* The Accumulation format is now called Victory in Gaining Grounds 2013.
+* Fixed errors opening tournaments and submitting score changes via a mobile device for tournaments with spaces in the name.
+]]>
+  </Update>
+  <Update Version="0.2.0">
+    <![CDATA[* NEW FEATURE: Leagues are now supported! These can be Achievement Leagues, Standard Play Leagues, or both!
+* NEW FEATURE: Events can now be exported and imported from the Event List screen. Want to save a fellow Event Operator some time typing in all those Achievements? Export your League and give it to them!
+* NEW FEATURE: Notes can be kept for individual Events as well as general notes. The event-specific notes can be opened from the Event List right-click menu or while viewing the Event, and the general notes can be opened from the "Open Notes Window" button in the main window. These are all saved between sessions.
+* NEW FEATURE: Is your event scheduled and ready go? Right click it in the Event List and choose the new option "Send Pre Event Report" and save yourself some typing! Is your event over?  You can send the Post Event report too! (By default, the report can only be sent once. This protection can be turned off in the Settings menu.)
+* Players can now be removed from a tournament during and between rounds. During a round, Forfeit them as normal. Between rounds, right click their name in the Tournament view and select "Forfeit Player". (You can undo a Forfeit by right clicking them and selecting "Remove Forfeit".)
+* Email settings can now be entered into the settings screen. This is used for the Pre and Post Event report, as well as for the feedback form in the Help menu.
+* When two or more people in an event are absolutely tied, they are given the same rank. How the next different person's rank is set can be changed in the Settings.
+* You can now store the forum URL for your event in the settings for each individual event, and you can go directly to the page (using your default browser) by selecting the "Open Wyrd Forum Post" option in the Right-Click menu of the Events list.
+* Forfeits in active Tournament rounds were not being properly reflected in the Manage Tournament Round screen.
+
+Note: To see an example of the Event importing feature, go to the official forum thread for this application: http://www.wyrd-games.net/showthread.php?37779-Lucius-s-Incident-Logbook-a-Malifaux-Tournament-Management-Application Attached to the first post is a export file to set up the January '13 to February '13 official league Dead of Winter.
+Note: Managing Leagues via the web is not supported at this time. This will be added in a future release.
+]]>
+  </Update>
+  <Update Version="0.1.6">
+    <![CDATA[* Fixed an error where the tournament's round length was not being assigned to the individual rounds.
+* The Web Server should close/crash more gracefully now.
+* The Archive and Backups paths are saved as relative paths if the chosen folder is a subfolder of the program's folder. This makes the app more compatible with synchronization services like Dropbox or Google Drive.
+* Related to the prior change, the default Archive and Backups folders for new installs are ".\Archive" and ".\Backups", respectively.
+* Player IDs are now GUIDs instead of integers. This makes them (hopefully) unique across all installs. Note that significant backend changes were require to achieve this, so there may be residual bugs for a build or two.
+* Removed the IDs that tied your Players.dat file to your tournaments. This will make the tournaments portable/transferrable, which should appear in the next non-bugfix revision.
+* Corrected what appears to be a ton of logic errors in the matchmaking logic. It should be a bit more intelligent now (such as actually not pairing people who played each other correctly.)
+* Tournaments were not saving the "Try To Avoid Same Faction Pairings" preference. If you turned this on before, you'll need to resave it.
+* The Players editor now shows the Region of the player instead of their ID. The ID is still displayed in the details.
+]]>
+  </Update>
+  <Update Version="0.1.5">
+    <![CDATA[* Fixed an error that happens when you close the Tournament List window followed by closing an open Tournament window.
+]]>
+  </Update>
+  <Update Version="0.1.4">
+    <![CDATA[* Fixed an error where a new tournament could not be saved due to the new archiving logic.
+* The buttons on the Tournament Round window went missing. They have been found, arrested and put back where they belong.
+]]>
+  </Update>
+  <Update Version="0.1.2">
+    <![CDATA[* NEW FEATURE: When viewing a Tournament, a new button is available that will allow you to manually swap players between their opponents.
+* New versions of this software are now automatically checked for at startup. This feature can be disabled from the Settings window.
+* All settings files can now be backed up each time they're saved. By default, 10 copies of each file are kept and are written to the "Backups" subfolder. Both settings can be changed in the Settings window.
+]]>
+  </Update>
+  <Update Version="0.1.1">
+    <![CDATA[* The password is only required by the web server if you want to edit rounds. Otherwise, the round stats can be viewed without a password now.
+* Added an error message window, which can be spawned from the Help menu, as an aide to finding out problems.
+]]>
+  </Update>
+  <Update Version="0.1.0">
+    <![CDATA[* NEW FEATURE: A lightweight web server has been implemented in the application. This can be accessed from other devices, such as cell phones or tablets, on the same Local Area Network.
+* Matchmaking logic was added to rounds produced after the first to try and not match up people who have already played each other.
+]]>
+  </Update>
+  <Update Version="0.0.5">
+    <![CDATA[* Special Malifaux fonts removed. This makes it cleaner looking and easier to distribute, although they may be reintroduced later. To be considered.
+* Add Player and Create New Tournament buttons add to the main screen, and added the Tools in the button bar to a Manage menu as well.
+* The Add Players screen now has an optional extra section for entering all player details in.
+* Added a setting to open a tournament up after players have been added.
+* Added a setting to randomize the table assignments for Rounds after the first, instead of assigning by rank. (Top 2 players at Table 1, next 2 at Table 2, etc.) Note that people are still paired based on their ranks, this only mixes up the tables they go to.
+]]>
+  </Update>
+  <Update Version="0.0.4">
+    <![CDATA[* Stability and cosmetic changes. (Added a few more helpful notes, particular in places where the Right Click options were not obvious.)
+* Settings screen added.
+* Default Factions can now be defined for players.
+* A matchmaking option for tournaments to avoid matching same faction has been introduced, similar to the Region matching avoidance logic.
+* Drastically rewrote the matchmaking logic. It's now faster and smarter, and has no chance of being stuck in an infinite loop.
+* Global exception handling has been put into place, which will create an error report and show the information to the user.
+* Framework put into place to support export/import of Tournaments.
+* "Gaining Grounds" option removed, as it wasn't necessary.
+* New Tournaments can no longer have the same name as an existing Tournament.
+* Tournaments can be saved as separate files instead of a single Tournaments.dat file.
+* An option to Archive (export as a single file in an Archive folder) and/or Delete Tournaments was added. The Archive path can be set in the Settings screen.
+* The Add Players screen now comes up by default when creating a new Tournament. This can be toggled with a button on the View Tournaments screen.
+* By default, confirmation is required before a new Tournament Round will start. This can be toggled on the View Tournament form, or the default can be set in the Settings screen.
+* Made the Change Log always viewable from the Help menu.
+
+TO DO:
+* Setting factions at the Tournament level.
+* More detailed round management:
+    * Swapping Players between tables.
+    * Deletion of Rounds.
+    * Editing of completed Rounds.
+    * Updating or clearing of scores.
+    * Redoing the matchups (either the 1st Round randomization or later Rounds after updating scores).
+]]>
+  </Update>
+  <Update Version="0.0.3">
+    <![CDATA[* Original limited alpha release.]]>
+  </Update>
+</Updates>

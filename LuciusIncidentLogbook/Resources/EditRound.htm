@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+        <title>Lucius's Incident Logbook -- Edit Round</title>
+        <link href="Style.css" rel="stylesheet" type="text/css" />
+        <style>
+            p.round
+            {
+                border-style: solid;
+                border-width: 1px;
+                text-align: center;
+            }
+        </style>
+    </head>
+<body>
+    <!-- error -->Enter the scores for these players: (Use 'F' for Forfeits.)<br /><br />
+	<form method="post" action="Submit.htm" name="UpdateScores">
+        Victory Points for <!-- player1 -->: <input type="text" name="Player1VP" maxlength="2" value="<!-- player1VP -->">
+        <br /><br />
+        Victory Points for <!-- player2 -->: <input type="text" name="Player2VP" maxlength="2" value="<!-- player2VP -->">
+        <br /><br />		
+		<input type="hidden" name="Name" value="<!-- name -->">
+        <input type="hidden" name="Player1ID" value="<!-- player1ID -->">
+		<input type="hidden" name="Player2ID" value="<!-- player2ID -->">
+		<input type="hidden" name="ID" value="<!-- ID -->">
+		<input type="hidden" name="Mode" value="UpdateScores">
+        <input type="submit" name="Submit" value="Submit Scores">
+    </form>
+    <br /><br />
+    <a href="/Tournament.htm?name=<!-- name -->"><p class="round"><br />Return to Tournaments List<br /><br /></p></a>
+</body>
+</html>
